@@ -10,6 +10,7 @@ import { HomeComponent } from './Componentes/home/home.component';
 import { ProveedoresComponent } from './Componentes/Proveedores/proveedores/proveedores.component';
 import { AddProveedorComponent } from './Componentes/Proveedores/add-proveedor/add-proveedor.component';
 import { ModifProveedorComponent } from './Componentes/Proveedores/modif-proveedor/modif-proveedor.component';
+import { VerProveedorComponent } from './Componentes/Proveedores/ver-proveedor/ver-proveedor.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ModifProveedorComponent } from './Componentes/Proveedores/modif-proveed
     HomeComponent,
     ProveedoresComponent,
     AddProveedorComponent,
-    ModifProveedorComponent
+    ModifProveedorComponent,
+    VerProveedorComponent
   ],
   imports: [
     BrowserModule,
