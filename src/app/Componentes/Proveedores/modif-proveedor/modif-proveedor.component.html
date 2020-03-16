@@ -32,8 +32,7 @@
             <form class="row">
                 <select name="Posicion" class="col-9 form-control">
                     <option value="" selected>Selecciona</option>
-
-                    <option *ngFor="let proveedor of proveedores" value="" >{{proveedor.Nombre}}</option>
+                    <option *ngFor="let proveedor of proveedores" value="{{proveedor.ID}}" >{{proveedor.Nombre}}</option>
 
                 </select>
                 

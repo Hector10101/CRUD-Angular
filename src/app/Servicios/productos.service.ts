@@ -24,7 +24,7 @@ export class ProductosService {
     this.productos.push(producto);
     let productos: Producto[] = [];
     if(localStorage.getItem('DataProductos') === null){
-      this.productos.push(producto);
+      productos.push(producto);
       localStorage.setItem('DataProductos', JSON.stringify(productos));
     }else{
       productos = JSON.parse(localStorage.getItem('DataProductos'));
