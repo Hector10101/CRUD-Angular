@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProveedorService } from 'src/app/Servicios/proveedor.service';
+import { Proveedor } from 'src/app/Modelos/Proveedor';
 
 @Component({
   selector: 'app-modif-proveedor',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./modif-proveedor.component.scss']
 })
 export class ModifProveedorComponent implements OnInit {
+  proveedores: Proveedor[];
 
-  constructor() { }
+  constructor(public proveedoresService: ProveedorService) { }
 
   ngOnInit(): void {
+    this.proveedores = this.proveedoresService.getProveedor();
   }
 
 }
