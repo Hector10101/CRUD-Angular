@@ -12,7 +12,12 @@
                 <th>Telefono</th>
             </thead>
             <tbody>
-
+                <tr *ngFor="let proveedor of proveedores">
+                    <td>{{proveedor.ID}}</td>
+                    <td>{{proveedor.Nombre}}</td>
+                    <td>{{proveedor.Direccion}}</td>
+                    <td>{{proveedor.NumeroTelefono}}</td>
+                </tr>
             </tbody>
         </table>
         

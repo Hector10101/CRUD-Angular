@@ -20,9 +20,6 @@ export class AddProveedorComponent implements OnInit {
       Direccion: newDireccion.value,
       NumeroTelefono: newTelefono.value,
     });
-
-    console.log(this.provedoresService.getProveedor());
-    return false;
   }
 
 }

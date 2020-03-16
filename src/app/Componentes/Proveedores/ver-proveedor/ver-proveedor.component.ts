@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {ProveedorService} from '../../../Servicios/proveedor.service';
+import { Proveedor } from 'src/app/Modelos/Proveedor';
+
 
 @Component({
   selector: 'app-ver-proveedor',
@@ -7,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VerProveedorComponent implements OnInit {
 
-  constructor() { }
+  proveedores: Proveedor[];
+  constructor(public proveedoresService: ProveedorService) { }
 
   ngOnInit(): void {
+    this.proveedores = this.proveedoresService.getProveedor();
   }
 
 }
