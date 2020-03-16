@@ -13,6 +13,7 @@ import { ModifProveedorComponent } from './Componentes/Proveedores/modif-proveed
 import { VerProveedorComponent } from './Componentes/Proveedores/ver-proveedor/ver-proveedor.component';
 import { AddProductoComponent } from './Componentes/Productos/add-producto/add-producto.component';
 import { ProductosComponent } from './Componentes/Productos/productos/productos.component';
+import { ModifProductoComponent } from './Componentes/Productos/modif-producto/modif-producto.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { ProductosComponent } from './Componentes/Productos/productos/productos.
     VerProveedorComponent,
     AddProductoComponent,
     ProductosComponent,
+    ModifProductoComponent,
 
   ],
   imports: [
