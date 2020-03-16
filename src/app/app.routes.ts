@@ -8,6 +8,7 @@ import { ProductosComponent } from './Componentes/Productos/productos/productos.
 import { AddProductoComponent } from './Componentes/Productos/add-producto/add-producto.component';
 import { ModifProductoComponent } from './Componentes/Productos/modif-producto/modif-producto.component';
 import { VerProductoComponent } from './Componentes/Productos/ver-producto/ver-producto.component';
+import { EliProveedorComponent } from './Componentes/Proveedores/eli-proveedor/eli-proveedor.component';
 
 const app_routes: Routes =[
     { path: 'home', component: HomeComponent},
@@ -15,6 +16,8 @@ const app_routes: Routes =[
     { path: 'addProveedores', component: AddProveedorComponent},
     { path: 'modifProveedores', component: ModifProveedorComponent},
     { path: 'verProveedores', component: VerProveedorComponent},
+    { path: 'eliProveedores', component: EliProveedorComponent},
+
 
     { path: 'productos', component: ProductosComponent},
     { path: 'addProductos', component: AddProductoComponent},

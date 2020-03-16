@@ -16,7 +16,8 @@ import { ProductosComponent } from './Componentes/Productos/productos/productos.
 import { ModifProductoComponent } from './Componentes/Productos/modif-producto/modif-producto.component';
 import { VerProductoComponent } from './Componentes/Productos/ver-producto/ver-producto.component';
 
-import {ProveedorService} from './Servicios/proveedor.service'
+import {ProveedorService} from './Servicios/proveedor.service';
+import { EliProveedorComponent } from './Componentes/Proveedores/eli-proveedor/eli-proveedor.component'
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import {ProveedorService} from './Servicios/proveedor.service'
     ProductosComponent,
     ModifProductoComponent,
     VerProductoComponent,
+    EliProveedorComponent,
 
   ],
   imports: [
