@@ -11,6 +11,8 @@ import { ProveedoresComponent } from './Componentes/Proveedores/proveedores/prov
 import { AddProveedorComponent } from './Componentes/Proveedores/add-proveedor/add-proveedor.component';
 import { ModifProveedorComponent } from './Componentes/Proveedores/modif-proveedor/modif-proveedor.component';
 import { VerProveedorComponent } from './Componentes/Proveedores/ver-proveedor/ver-proveedor.component';
+import { AddProductoComponent } from './Componentes/Productos/add-producto/add-producto.component';
+import { ProductosComponent } from './Componentes/Productos/productos/productos.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { VerProveedorComponent } from './Componentes/Proveedores/ver-proveedor/v
     ProveedoresComponent,
     AddProveedorComponent,
     ModifProveedorComponent,
-    VerProveedorComponent
+    VerProveedorComponent,
+    AddProductoComponent,
+    ProductosComponent
   ],
   imports: [
     BrowserModule,

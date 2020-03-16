@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="mt-5">
+        <h1>Productos</h1>
+    </div>
+   
+    <div class="row mt-5">
+        <div class="col-4">
+            <div class="bg-primary div-pp p-5">
+                <h3> Agregar un Producto </h3>
+                <p class="p-pp">Puedes agregar un nuevo producto! Recuerda que los productos nececitan de un <a class="alert-link">Proveedor</a>.</p>
+                <button class="btn btn-PP" [routerLink]="['../addProductos']"><a >Agregar</a></button>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="bg-primary div-pp p-5">
+                <h3>Editar/Eliminar un Productos</h3>
+                <p class="p-pp">Puedes Editar & Eliminar tus Productos!. Recuerda tener algun Producto para poder editar!</p>
+                <button class="btn btn-PP" [routerLink]="['../modifProductos']"><a >Editar/Eliminar</a></button>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="bg-primary div-pp p-5">
+                <h3>Ver todos tus Productos</h3>
+                <p class="p-pp">Puedes ver todos tus Productos agregados! Recuerda tener almenos un Productos agregado!</p>
+                <button class="btn btn-PP" [routerLink]="['../verProductos']"><a >Ver</a></button>
+            </div>
+        </div>
+    </div>
+</div>
