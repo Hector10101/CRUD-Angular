@@ -9,6 +9,7 @@ import { AddProductoComponent } from './Componentes/Productos/add-producto/add-p
 import { ModifProductoComponent } from './Componentes/Productos/modif-producto/modif-producto.component';
 import { VerProductoComponent } from './Componentes/Productos/ver-producto/ver-producto.component';
 import { EliProveedorComponent } from './Componentes/Proveedores/eli-proveedor/eli-proveedor.component';
+import { EditProveedorComponent } from './Componentes/Proveedores/edit-proveedor/edit-proveedor.component';
 
 const app_routes: Routes =[
     { path: 'home', component: HomeComponent},
@@ -17,6 +18,8 @@ const app_routes: Routes =[
     { path: 'modifProveedores', component: ModifProveedorComponent},
     { path: 'verProveedores', component: VerProveedorComponent},
     { path: 'eliProveedores', component: EliProveedorComponent},
+    { path: 'editProveedores', component: EditProveedorComponent},
+
 
 
     { path: 'productos', component: ProductosComponent},
