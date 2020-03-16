@@ -14,6 +14,7 @@ import { VerProveedorComponent } from './Componentes/Proveedores/ver-proveedor/v
 import { AddProductoComponent } from './Componentes/Productos/add-producto/add-producto.component';
 import { ProductosComponent } from './Componentes/Productos/productos/productos.component';
 import { ModifProductoComponent } from './Componentes/Productos/modif-producto/modif-producto.component';
+import { VerProductoComponent } from './Componentes/Productos/ver-producto/ver-producto.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { ModifProductoComponent } from './Componentes/Productos/modif-producto/m
     AddProductoComponent,
     ProductosComponent,
     ModifProductoComponent,
+    VerProductoComponent,
 
   ],
   imports: [
