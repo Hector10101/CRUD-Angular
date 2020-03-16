@@ -9,11 +9,17 @@
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Descripción</th>
-                <th>Fecha de venci  miento</th>
+                <th>Fecha de vencimiento</th>
                 <th>ID del Proveedor</th>
             </thead>
             <tbody>
-
+                <tr *ngFor="let producto of productos">
+                    <td>{{producto.ID}}</td>
+                    <td>{{producto.Nombre}}</td>
+                    <td>{{producto.Descripcion}}</td>
+                    <td>{{producto.FechaVencimiento}}</td>
+                    <td>{{producto.ID_Producto}}</td>
+                </tr>
             </tbody>
         </table>
         
