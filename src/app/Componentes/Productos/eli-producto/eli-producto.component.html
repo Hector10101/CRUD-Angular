@@ -1,5 +1,5 @@
 <div class="container mt-4">
-    <h3>Modificar Producto</h3>
+    <h3>Eliminar Producto</h3>
     <a class="text-primary alert-link" [routerLink]="['../addProductos']">¿Quieres agregar un Producto?</a>
     <br />
     <br />
@@ -16,33 +16,24 @@
                 </div>
                 <div class="form-group">
                     <h5>Descripción</h5>
-                    <textarea class="form-control" readonly rows="3"></textarea>
+                    <textarea class="form-control" rows="3" readonly></textarea>
                 </div>
                 <div class="form-group">
                     <h5>Fecha de Vencimiento</h5>
                     <input class="form-control" readonly>
                 </div>
                 <div class="form-group">
+                    
                     <h5>ID del Proveedor</h5>
                     <input class="form-control" readonly>
                 </div>
-                <button name="Editar" value="0" type="submit" class="btn btn-primary" >Ir a Editar</button>
-                <button name="Eliminar" value="1" type="submit" class="btn btn-danger" [routerLink]="['../eliProductos']">Ir a Eliminar</button>
+                <button value="0" class="btn btn-primary" [routerLink]="['../modifProductos']">Cancelar</button>
+                <button name="Eliminar" value="1" type="submit" class="btn btn-danger">Eliminar</button>
             </form>
         </div>
 
         <div class="col-6">
-            <h5 class="text-primary">Selecciona el Producto</h5>
-            <form class="row">
-                <select name="Posicion" class="col-9 form-control">
-                    <option value="" selected>Selecciona</option>
-                    <option *ngFor="let producto of productos" value="{{producto.ID}}" >{{producto.Nombre}}</option>
-                </select>
-                
-                <div class="col-3">
-                    <button name="ver" class="btn btn-primary" >Seleccionar</button>
-                </div>
-            </form>
+            
         </div>
     </div>
 </div>

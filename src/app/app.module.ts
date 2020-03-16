@@ -18,7 +18,8 @@ import { VerProductoComponent } from './Componentes/Productos/ver-producto/ver-p
 
 import {ProveedorService} from './Servicios/proveedor.service';
 import { EliProveedorComponent } from './Componentes/Proveedores/eli-proveedor/eli-proveedor.component';
-import { EditProveedorComponent } from './Componentes/Proveedores/edit-proveedor/edit-proveedor.component'
+import { EditProveedorComponent } from './Componentes/Proveedores/edit-proveedor/edit-proveedor.component';
+import { EliProductoComponent } from './Componentes/Productos/eli-producto/eli-producto.component'
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { EditProveedorComponent } from './Componentes/Proveedores/edit-proveedor
     VerProductoComponent,
     EliProveedorComponent,
     EditProveedorComponent,
+    EliProductoComponent,
 
   ],
   imports: [
