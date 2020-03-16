@@ -5,6 +5,7 @@ import { AddProveedorComponent } from './Componentes/Proveedores/add-proveedor/a
 import { ModifProveedorComponent } from './Componentes/Proveedores/modif-proveedor/modif-proveedor.component';
 import { VerProveedorComponent } from './Componentes/Proveedores/ver-proveedor/ver-proveedor.component';
 import { ProductosComponent } from './Componentes/Productos/productos/productos.component';
+import { AddProductoComponent } from './Componentes/Productos/add-producto/add-producto.component';
 
 const app_routes: Routes =[
     { path: 'home', component: HomeComponent},
@@ -14,6 +15,8 @@ const app_routes: Routes =[
     { path: 'verProveedores', component: VerProveedorComponent},
 
     { path: 'productos', component: ProductosComponent},
+    { path: 'addProductos', component: AddProductoComponent},
+
 
 
     { path:'**', pathMatch: 'full', redirectTo: 'home'}

@@ -14,6 +14,7 @@ import { VerProveedorComponent } from './Componentes/Proveedores/ver-proveedor/v
 import { AddProductoComponent } from './Componentes/Productos/add-producto/add-producto.component';
 import { ProductosComponent } from './Componentes/Productos/productos/productos.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import { ProductosComponent } from './Componentes/Productos/productos/productos.
     ModifProveedorComponent,
     VerProveedorComponent,
     AddProductoComponent,
-    ProductosComponent
+    ProductosComponent,
+
   ],
   imports: [
     BrowserModule,
