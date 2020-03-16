@@ -9,6 +9,7 @@ import { NavegacionComponent } from './Componentes/navegacion/navegacion.compone
 import { HomeComponent } from './Componentes/home/home.component';
 import { ProveedoresComponent } from './Componentes/Proveedores/proveedores/proveedores.component';
 import { AddProveedorComponent } from './Componentes/Proveedores/add-proveedor/add-proveedor.component';
+import { ModifProveedorComponent } from './Componentes/Proveedores/modif-proveedor/modif-proveedor.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AddProveedorComponent } from './Componentes/Proveedores/add-proveedor/a
     NavegacionComponent,
     HomeComponent,
     ProveedoresComponent,
-    AddProveedorComponent
+    AddProveedorComponent,
+    ModifProveedorComponent
   ],
   imports: [
     BrowserModule,
