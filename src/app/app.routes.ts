@@ -11,6 +11,7 @@ import { VerProductoComponent } from './Componentes/Productos/ver-producto/ver-p
 import { EliProveedorComponent } from './Componentes/Proveedores/eli-proveedor/eli-proveedor.component';
 import { EditProveedorComponent } from './Componentes/Proveedores/edit-proveedor/edit-proveedor.component';
 import { EliProductoComponent } from './Componentes/Productos/eli-producto/eli-producto.component';
+import { EditProductoComponent } from './Componentes/Productos/edit-producto/edit-producto.component';
 
 const app_routes: Routes =[
     { path: 'home', component: HomeComponent},
@@ -28,6 +29,8 @@ const app_routes: Routes =[
     { path: 'modifProductos', component: ModifProductoComponent},
     { path: 'verProductos', component: VerProductoComponent},
     { path: 'eliProductos', component: EliProductoComponent},
+    { path: 'editProductos', component: EditProductoComponent},
+
 
 
 
