@@ -1,4 +1,4 @@
-export interface Proveedor{
+export interface Producto{
     ID: string;
     Nombre: string;
     Descripcion: string;
