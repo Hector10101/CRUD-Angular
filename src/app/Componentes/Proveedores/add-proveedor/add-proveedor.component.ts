@@ -20,6 +20,10 @@ export class AddProveedorComponent implements OnInit {
       Direccion: newDireccion.value,
       NumeroTelefono: newTelefono.value,
     });
+    newID.value = '';
+    newNombre.value = '';
+    newDireccion.value = '';
+    newTelefono.value = '';
   }
 
 }

@@ -23,7 +23,7 @@
                     <input class="form-control" value="{{Telefono}}"readonly>
                 </div>
                 <button name="Editar" value="0" type="submit" class="btn btn-primary"[routerLink]="['../modifProveedores']">Volver</button>
-                <button name="Eliminar" value="1" type="submit" class="btn btn-danger" [routerLink]="['../eliProveedores']">Eliminar</button>
+                <button name="Eliminar" value="1" type="submit" class="btn btn-danger" (click)=" DeleteProveedor()" >Eliminar</button>
             </form>
         </div>
 

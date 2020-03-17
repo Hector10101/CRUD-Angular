@@ -32,5 +32,21 @@ export class EliProveedorComponent implements OnInit {
       }
     }
   }
+  DeleteProveedor(){
+    let i =0;
+    for(let proveedor of this.proveedoresService.getProveedor()){
+      if(proveedor.ID === this.ID){
+        if(confirm('Estas Seguro que quieres eliminarlo?')){
+          this.proveedores.splice(i, 1);
+          localStorage.setItem('DataProveedores', JSON.stringify(this.proveedores));
+          this.ID = '';
+          this.Nombre = '';
+          this.Direccion = '';
+          this.Telefono = '';
+        } 
+      }
+      i++;
+    }
+  }
 
 }
