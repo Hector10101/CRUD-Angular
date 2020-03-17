@@ -15,7 +15,8 @@ export class EditProductoComponent implements OnInit {
   Nombre: string;
   Descripcion:string;
   FechaVencimiento: string;
-  ID_Proveedor: string;
+  IDProveedor: string;
+  confirm: boolean = false;
 
   constructor(public productosService: ProductosService) { }
 
@@ -30,8 +31,45 @@ export class EditProductoComponent implements OnInit {
         this.Nombre = producto.Nombre;
         this.Descripcion = producto.Descripcion;
         this.FechaVencimiento = producto.FechaVencimiento;
-        this.ID_Proveedor = producto.ID_Producto;
+        this.IDProveedor = producto.IDProveedor;
+
       }
+    }
+  }
+
+  
+  editProducto(){
+    let i =0;
+    for(let producto of this.productosService.getProducto()){
+      if(producto.ID === this.ID){
+        if(confirm('Estas Seguro que quieres editarlo?')){
+          this.productos.splice(i, 1);
+          localStorage.setItem('DataProductos', JSON.stringify(this.productos));
+          this.confirm = true;
+          
+        } 
+      }
+      i++;
+    }
+  }
+
+  addProducto(newID: HTMLInputElement, newNombre: HTMLInputElement, newDescripción: HTMLInputElement, newFechaVencimiento: HTMLInputElement, newIDProveedor: HTMLInputElement){
+    if(this.confirm === true){
+      this.productosService.setProducto({
+        ID: newID.value,
+        Nombre: newNombre.value,
+        Descripcion: newDescripción.value,
+        FechaVencimiento: newFechaVencimiento.value,
+        IDProveedor: newIDProveedor.value,
+
+      });
+     
+      newID.value = '';
+      newNombre.value = '';
+      newDescripción.value = '';
+      newFechaVencimiento.value = '';
+      newIDProveedor.value = '';
+      
     }
   }
 }

@@ -13,9 +13,9 @@ export class EliProductoComponent implements OnInit {
   seleccionado: string;
   ID: string;
   Nombre: string;
-  Descripcion:string;
+  Descripcion: string;
   FechaVencimiento: string;
-  ID_Proveedor: string;
+  Proveedor: string ;
 
   constructor(public productosService: ProductosService) { }
 
@@ -23,14 +23,14 @@ export class EliProductoComponent implements OnInit {
     this.productos = this.productosService.getProducto();
   }
 
-  getProveedor(){
+  getProducto(){
     for(let producto of this.productos){
       if(producto.ID === this.seleccionado){
         this.ID = producto.ID;
         this.Nombre = producto.Nombre;
         this.Descripcion = producto.Descripcion;
         this.FechaVencimiento = producto.FechaVencimiento;
-        this.ID_Proveedor = producto.ID_Producto;
+        this.Proveedor = producto.IDProveedor;
       }
     }
   }
@@ -46,7 +46,7 @@ export class EliProductoComponent implements OnInit {
           this.Nombre = '';
           this.Descripcion = '';
           this.FechaVencimiento = '';
-          this.ID_Proveedor= '';
+          this.Proveedor = '';
         } 
       }
       i++;

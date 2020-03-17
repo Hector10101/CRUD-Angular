@@ -3,5 +3,5 @@ export interface Producto{
     Nombre: string;
     Descripcion: string;
     FechaVencimiento: string;
-    ID_Producto: string;
+    IDProveedor: string;
 }

@@ -19,7 +19,7 @@ export class AddProductoComponent implements OnInit {
       Nombre: newNombre.value,
       Descripcion: newDescripcion.value,
       FechaVencimiento: newFechaVencimiento.value,
-      ID_Producto: newIDProveedor.value
+      IDProveedor: newIDProveedor.value
     });
     newID.value = '';
     newNombre.value = '';
