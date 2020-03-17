@@ -1,39 +1,48 @@
 <div class="container mt-4">
-    <h3>Editar Producto</h3>
+    <h3>Eliminar Producto</h3>
     <a class="text-primary alert-link" [routerLink]="['../addProductos']">¿Quieres agregar un Producto?</a>
     <br />
     <br />
     <div class="row">
         <div class="col-6">
-            <form class="form-controler border p-5">
+            <form class="form-controler  border p-5">
                 <div class="form-group">
                     <h5>ID</h5>
-                    <input class="form-control" >
+                    <input class="form-control" value="{{ID}}">
                 </div>
                 <div class="form-group">
                     <h5>Nombre</h5>
-                    <input class="form-control" >
+                    <input class="form-control" value="{{Nombre}}">
                 </div>
                 <div class="form-group">
                     <h5>Descripción</h5>
-                    <textarea class="form-control" rows="3" ></textarea>
+                    <textarea class="form-control" value="{{Descripcion}}" rows="3"></textarea>
                 </div>
-                <div class="form-group">
+                <div class="form-group"> 
                     <h5>Fecha de Vencimiento</h5>
-                    <input class="form-control" >
+                    <input class="form-control" value="{{FechaVencimiento}}">
                 </div>
                 <div class="form-group">
-                    
                     <h5>ID del Proveedor</h5>
-                    <input class="form-control" >
+                    <input class="form-control" value="{{ID_Proveedor}}">
                 </div>
-                <button value="0" class="btn btn-primary" [routerLink]="['../modifProductos']">Cancelar</button>
-                <button name="Editar" value="1" type="submit" class="btn btn-danger">Editar</button>
+                <button name="Editar" value="0" type="submit" class="btn btn-primary" [routerLink]="['../modifProductos']">Cancelar</button>
+                <button name="Eliminar" value="1" type="submit" class="btn btn-danger" >Eliminar</button>
             </form>
         </div>
 
         <div class="col-6">
+            <h5 class="text-primary">Selecciona el Producto</h5>
             
+            <form class="row">
+                <select  name="select" [(ngModel)] = "seleccionado" (click)="getProveedor()" class="col-9 form-control">
+
+                    <option [value]="producto.ID" *ngFor="let producto of productos" >
+                        {{producto.Nombre}}
+                    </option>
+                </select>
+                
+            </form>
         </div>
     </div>
 </div>

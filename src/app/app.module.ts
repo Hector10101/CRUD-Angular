@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
 
 import { app_routing} from './app.routes'
 
@@ -16,11 +17,13 @@ import { ProductosComponent } from './Componentes/Productos/productos/productos.
 import { ModifProductoComponent } from './Componentes/Productos/modif-producto/modif-producto.component';
 import { VerProductoComponent } from './Componentes/Productos/ver-producto/ver-producto.component';
 
+
 import {ProveedorService} from './Servicios/proveedor.service';
 import { EliProveedorComponent } from './Componentes/Proveedores/eli-proveedor/eli-proveedor.component';
 import { EditProveedorComponent } from './Componentes/Proveedores/edit-proveedor/edit-proveedor.component';
 import { EliProductoComponent } from './Componentes/Productos/eli-producto/eli-producto.component';
-import { EditProductoComponent } from './Componentes/Productos/edit-producto/edit-producto.component'
+import { EditProductoComponent } from './Componentes/Productos/edit-producto/edit-producto.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -44,7 +47,9 @@ import { EditProductoComponent } from './Componentes/Productos/edit-producto/edi
   imports: [
     BrowserModule,
     AppRoutingModule,
-    app_routing
+    app_routing,
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [ProveedorService],
   bootstrap: [AppComponent]

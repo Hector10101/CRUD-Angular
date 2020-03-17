@@ -10,6 +10,8 @@ import { ProductosService } from 'src/app/Servicios/productos.service';
 })
 export class ModifProductoComponent implements OnInit {
   productos: Producto[];
+  seleccionado: string;
+ 
 
   constructor(public productosService: ProductosService) { }
 

@@ -1,48 +1,21 @@
-<div class="container mt-4">
-    <h3>Modificar Producto</h3>
-    <a class="text-primary alert-link" [routerLink]="['../addProductos']">¿Quieres agregar un Producto?</a>
-    <br />
-    <br />
-    <div class="row">
-        <div class="col-6">
-            <form class="form-controler border p-5">
-                <div class="form-group">
-                    <h5>ID</h5>
-                    <input class="form-control" readonly>
-                </div>
-                <div class="form-group">
-                    <h5>Nombre</h5>
-                    <input class="form-control" readonly>
-                </div>
-                <div class="form-group">
-                    <h5>Descripción</h5>
-                    <textarea class="form-control" readonly rows="3"></textarea>
-                </div>
-                <div class="form-group">
-                    <h5>Fecha de Vencimiento</h5>
-                    <input class="form-control" readonly>
-                </div>
-                <div class="form-group">
-                    <h5>ID del Proveedor</h5>
-                    <input class="form-control" readonly>
-                </div>
-                <button name="Editar" value="0" type="submit" class="btn btn-primary" [routerLink]="['../editProductos']">Ir a Editar</button>
-                <button name="Eliminar" value="1" type="submit" class="btn btn-primary" [routerLink]="['../eliProductos']">Ir a Eliminar</button>
-            </form>
+<div class="container">
+    <div class="mt-5">
+        <h3>Modificar Producto</h3>
+    </div>
+    <div class="row mt-5">
+        <div class="col-6 ">
+            <div class="bg-primary div-pp p-5">
+                <h3>Editar Producto</h3>
+                <p class="p-pp">Ven y edita tu Producto!</p>
+                <button class="btn btn-PP" [routerLink]="['../editProductos']">Editar</button>
+            </div>
         </div>
-
-        <div class="col-6">
-            <h5 class="text-primary">Selecciona el Producto</h5>
-            <form class="row">
-                <select name="Posicion" class="col-9 form-control">
-                    <option value="" selected>Selecciona</option>
-                    <option *ngFor="let producto of productos" value="{{producto.ID}}" >{{producto.Nombre}}</option>
-                </select>
-                
-                <div class="col-3">
-                    <button name="ver" class="btn btn-primary" >Seleccionar</button>
-                </div>
-            </form>
+        <div class="col-6 ">
+            <div class="bg-primary div-pp p-5">
+                <h3>Eliminar Producto</h3>
+                <p class="p-pp">Ya vas a Eliminar un Producto?</p>
+                <button class="btn btn-PP" [routerLink]="['../eliProductos']">Eliminar</button>
+            </div>
         </div>
     </div>
 </div>

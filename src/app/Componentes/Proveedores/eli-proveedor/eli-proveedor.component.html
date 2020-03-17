@@ -8,27 +8,34 @@
             <form class="form-controler border p-5">
                 <div class="form-group">
                     <h5>ID</h5>
-                    <input class="form-control" readonly>
+                    <input class="form-control" value="{{ID}}"  readonly>
                 </div>
                 <div class="form-group">
                     <h5>Nombre</h5>
-                    <input class="form-control"readonly>
+                    <input class="form-control" value="{{Nombre}}"readonly>
                 </div>
                 <div class="form-group">
                     <h5>Direccion</h5>
-                    <input class="form-control"readonly>
+                    <input class="form-control" value="{{Direccion}}"readonly>
                 </div>
                 <div class="form-group">
                     <h5>Telefono</h5>
-                    <input class="form-control"readonly>
+                    <input class="form-control" value="{{Telefono}}"readonly>
                 </div>
-                <button value="0" class="btn btn-primary" [routerLink]="['../modifProveedores']">Cancelar</button>
-                <button name="Eliminar" value="1" type="submit" class="btn btn-danger">Eliminar</button>
+                <button name="Editar" value="0" type="submit" class="btn btn-primary"[routerLink]="['../modifProveedores']">Volver</button>
+                <button name="Eliminar" value="1" type="submit" class="btn btn-danger" [routerLink]="['../eliProveedores']">Eliminar</button>
             </form>
         </div>
 
         <div class="col-6">
-            
+            <h5 class="text-primary">Selecciona el Proveedor</h5>
+            <form class="row">
+                <select  name="Posicion" [(ngModel)] = "seleccionado" (click)="getProveedor()" class="col-9 form-control">
+                    
+                    <option [value]="proveedor.ID" *ngFor="let proveedor of proveedores">{{proveedor.Nombre}}</option>
+
+                </select>
+            </form>
         </div>
     </div>
 </div>

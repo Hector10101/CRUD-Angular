@@ -1,45 +1,21 @@
-<div class="container mt-4">
-    <h3>Modificar Proveedor</h3>
-    <a class="text-primary alert-link" [routerLink]="['../addProveedores']">¿Quieres agregar un proveedor?</a>
-    <br />
-    <br />
-    <div class="row">
-        <div class="col-6">
-            <form class="form-controler border p-5">
-                <div class="form-group">
-                    <h5>ID</h5>
-                    <input class="form-control" readonly>
-                </div>
-                <div class="form-group">
-                    <h5>Nombre</h5>
-                    <input class="form-control"readonly>
-                </div>
-                <div class="form-group">
-                    <h5>Direccion</h5>
-                    <input class="form-control"readonly>
-                </div>
-                <div class="form-group">
-                    <h5>Telefono</h5>
-                    <input class="form-control"readonly>
-                </div>
-                <button name="Editar" value="0" type="submit" class="btn btn-primary"[routerLink]="['../editProveedores']">Ir a Editar</button>
-                <button name="Eliminar" value="1" type="submit" class="btn btn-primary" [routerLink]="['../eliProveedores']">Ir a Eliminar</button>
-            </form>
+<div class="container">
+    <div class="mt-5">
+        <h3>Modificar Proveedor</h3>
+    </div>
+    <div class="row mt-5">
+        <div class="col-6 ">
+            <div class="bg-primary div-pp p-5">
+                <h3>Editar Proveedor</h3>
+                <p class="p-pp">Ven y edita tu proveedor!</p>
+                <button class="btn btn-PP" [routerLink]="['../editProveedores']">Editar</button>
+            </div>
         </div>
-
-        <div class="col-6">
-            <h5 class="text-primary">Selecciona el Proveedor</h5>
-            <form class="row">
-                <select name="Posicion" class="col-9 form-control">
-                    <option value="" selected>Selecciona</option>
-                    <option *ngFor="let proveedor of proveedores" value="{{proveedor.ID}}" >{{proveedor.Nombre}}</option>
-
-                </select>
-                
-                <div class="col-3">
-                    <button name="ver" class="btn btn-primary" >Seleccionar</button>
-                </div>
-            </form>
+        <div class="col-6 ">
+            <div class="bg-primary div-pp p-5">
+                <h3>Eliminar Proveedor</h3>
+                <p class="p-pp">Ya vas a Eliminar un Proveedor?</p>
+                <button class="btn btn-PP" [routerLink]="['../eliProveedores']">Eliminar</button>
+            </div>
         </div>
     </div>
 </div>
