@@ -8,14 +8,13 @@ import { ProveedorService } from 'src/app/Servicios/proveedor.service';
   styleUrls: ['./edit-proveedor.component.scss']
 })
 export class EditProveedorComponent implements OnInit {
-
-  
   proveedores: Proveedor[];
   seleccionado: string;
   ID: string;
   Nombre: string;
   Direccion:string;
   Telefono: string;
+  confirm: boolean = false;
 
   constructor(public proveedoresService: ProveedorService) { }
 
@@ -31,6 +30,35 @@ export class EditProveedorComponent implements OnInit {
         this.Direccion = proveedor.Direccion;
         this.Telefono = proveedor.NumeroTelefono;
       }
+    }
+  }
+ 
+  editProveedor(){
+    let i =0;
+    for(let proveedor of this.proveedoresService.getProveedor()){
+      if(proveedor.ID === this.ID){
+        if(confirm("Estas seguro que quieres editarlo?")){
+          this.proveedores.splice(i, 1);
+          localStorage.setItem('DataProveedores', JSON.stringify(this.proveedores));
+          this.confirm = true;
+        }
+      }
+      i++;
+    }
+  }
+
+  addProveedor(newID: HTMLInputElement, newNombre: HTMLInputElement, newDireccion: HTMLInputElement, newTelefono: HTMLInputElement){
+    if(this.confirm === true){
+      this.proveedoresService.setProveedor({
+        ID: newID.value,
+        Nombre: newNombre.value,
+        Direccion: newDireccion.value,
+        NumeroTelefono: newTelefono.value,
+      });
+      newID.value = '';
+      newNombre.value = '';
+      newDireccion.value = '';
+      newTelefono.value = '';
     }
   }
 }
