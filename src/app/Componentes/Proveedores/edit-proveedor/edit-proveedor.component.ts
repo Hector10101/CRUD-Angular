@@ -15,6 +15,8 @@ export class EditProveedorComponent implements OnInit {
   Direccion:string;
   Telefono: string;
   confirm: boolean = false;
+  ruta: boolean  = false;
+ 
 
   constructor(public proveedoresService: ProveedorService) { }
 
@@ -29,6 +31,7 @@ export class EditProveedorComponent implements OnInit {
         this.Nombre = proveedor.Nombre;
         this.Direccion = proveedor.Direccion;
         this.Telefono = proveedor.NumeroTelefono;
+        this.ruta = true;
       }
     }
   }
@@ -37,7 +40,7 @@ export class EditProveedorComponent implements OnInit {
     let i =0;
     for(let proveedor of this.proveedoresService.getProveedor()){
       if(proveedor.ID === this.ID){
-        if(confirm("Estas seguro que quieres editarlo?")){
+        if(confirm('Estas seguro que quieres editarlo?')){
           this.proveedores.splice(i, 1);
           localStorage.setItem('DataProveedores', JSON.stringify(this.proveedores));
           this.confirm = true;
@@ -49,6 +52,7 @@ export class EditProveedorComponent implements OnInit {
 
   addProveedor(newID: HTMLInputElement, newNombre: HTMLInputElement, newDireccion: HTMLInputElement, newTelefono: HTMLInputElement){
     if(this.confirm === true){
+
       this.proveedoresService.setProveedor({
         ID: newID.value,
         Nombre: newNombre.value,

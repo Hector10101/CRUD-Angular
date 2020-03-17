@@ -27,7 +27,7 @@
                     <input class="form-control" value="{{IDProveedor}}" #newIDProveedor required>
                 </div>
                 <button  class="btn btn-primary" [routerLink]="['../modifProductos']">Cancelar</button>
-                <button name="Editar" class="btn btn-danger" (click)="editProducto()" (click)="addProducto(newID, newNombre,newDescripcion, newFechaVencimiento, newIDProveedor)" >Editar</button>
+                <button name="Editar" class="btn btn-danger"*ngIf="ruta" [routerLink]="['../verProductos']"  (click)="editProducto()" (click)="addProducto(newID, newNombre,newDescripcion, newFechaVencimiento, newIDProveedor)" >Editar</button>
             </form>
         </div>
 

@@ -15,6 +15,7 @@ export class EliProveedorComponent implements OnInit {
   Nombre: string;
   Direccion:string;
   Telefono: string;
+  ruta: boolean  = false;
 
   constructor(public proveedoresService: ProveedorService) { }
 
@@ -29,6 +30,7 @@ export class EliProveedorComponent implements OnInit {
         this.Nombre = proveedor.Nombre;
         this.Direccion = proveedor.Direccion;
         this.Telefono = proveedor.NumeroTelefono;
+        this.ruta = true;
       }
     }
   }

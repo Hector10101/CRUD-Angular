@@ -16,6 +16,7 @@ export class EliProductoComponent implements OnInit {
   Descripcion: string;
   FechaVencimiento: string;
   Proveedor: string ;
+  ruta: boolean  = false;
 
   constructor(public productosService: ProductosService) { }
 
@@ -31,6 +32,7 @@ export class EliProductoComponent implements OnInit {
         this.Descripcion = producto.Descripcion;
         this.FechaVencimiento = producto.FechaVencimiento;
         this.Proveedor = producto.IDProveedor;
+        this.ruta = true;
       }
     }
   }

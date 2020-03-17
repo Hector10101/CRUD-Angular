@@ -5,7 +5,7 @@
     <br />
     <div class="row">
         <div class="col-6">
-            <form class="form-controler border p-5" >
+            <form class="form-controler  border p-5" >
                 <div class="form-group">
                     <h5>ID</h5>
                     <input class="form-control" value="{{ID}}" #newID required>
@@ -23,7 +23,7 @@
                     <input class="form-control" value="{{Telefono}}" #newTelefono required maxlength="12" id="phone" placeholder="000-000-0000" pattern="[0-9]{3}[ -][0-9]{3}[ -][0-9]{4}" title="Formato: 000-000-0000">
                 </div>
                 <button name="Editar" value="0" class="btn btn-primary"[routerLink]="['../modifProveedores']">Volver</button>
-                <button value="1" type="submit" class="btn btn-danger" (click)="editProveedor()" (click)="addProveedor(newID, newNombre,newDireccion, newTelefono)" >Editar</button>
+                <button value="1" type="submit" class="btn btn-danger" *ngIf="ruta" [routerLink]="['../verProveedores']" (click)="editProveedor()" (click)="addProveedor(newID, newNombre,newDireccion, newTelefono)" >Editar</button>
             </form>
         </div>
 

@@ -17,6 +17,7 @@ export class EditProductoComponent implements OnInit {
   FechaVencimiento: string;
   IDProveedor: string;
   confirm: boolean = false;
+  ruta: boolean  = false;
 
   constructor(public productosService: ProductosService) { }
 
@@ -32,7 +33,7 @@ export class EditProductoComponent implements OnInit {
         this.Descripcion = producto.Descripcion;
         this.FechaVencimiento = producto.FechaVencimiento;
         this.IDProveedor = producto.IDProveedor;
-
+        this.ruta = true;
       }
     }
   }

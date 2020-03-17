@@ -27,7 +27,7 @@
                     <input class="form-control" value="{{Proveedor}}" readonly>
                 </div>
                 <button name="Editar" value="0"  class="btn btn-primary" [routerLink]="['../modifProductos']">Cancelar</button>
-                <button name="Eliminar" value="1" type="submit" class="btn btn-danger" (click)=" DeleteProducto()">Eliminar</button>
+                <button name="Eliminar" value="1" type="submit" class="btn btn-danger" *ngIf="ruta" [routerLink]="['../verProductos']" (click)=" DeleteProducto()">Eliminar</button>
             </form>
         </div>
 
