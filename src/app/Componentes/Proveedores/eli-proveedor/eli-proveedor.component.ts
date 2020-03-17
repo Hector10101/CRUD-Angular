@@ -22,7 +22,6 @@ export class EliProveedorComponent implements OnInit {
   ngOnInit(): void {
     this.proveedores = this.proveedoresService.getProveedor();
   }
-
   getProveedor(){
     for(let proveedor of this.proveedores){
       if(proveedor.ID === this.seleccionado){
