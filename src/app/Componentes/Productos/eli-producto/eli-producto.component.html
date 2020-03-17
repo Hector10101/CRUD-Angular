@@ -27,7 +27,7 @@
                     <input class="form-control" value="{{ID_Proveedor}}" readonly>
                 </div>
                 <button name="Editar" value="0" type="submit" class="btn btn-primary" [routerLink]="['../modifProductos']">Cancelar</button>
-                <button name="Eliminar" value="1" type="submit" class="btn btn-danger" >Eliminar</button>
+                <button name="Eliminar" value="1" type="submit" class="btn btn-danger" (click)=" DeleteProducto()">Eliminar</button>
             </form>
         </div>
 

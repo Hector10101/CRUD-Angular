@@ -34,4 +34,22 @@ export class EliProductoComponent implements OnInit {
       }
     }
   }
+
+  DeleteProducto(){
+    let i =0;
+    for(let producto of this.productosService.getProducto()){
+      if(producto.ID === this.ID){
+        if(confirm('Estas Seguro que quieres eliminarlo?')){
+          this.productos.splice(i, 1);
+          localStorage.setItem('DataProductos', JSON.stringify(this.productos));
+          this.ID = '';
+          this.Nombre = '';
+          this.Descripcion = '';
+          this.FechaVencimiento = '';
+          this.ID_Proveedor= '';
+        } 
+      }
+      i++;
+    }
+  }
 }

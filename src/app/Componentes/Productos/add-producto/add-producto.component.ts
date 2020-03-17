@@ -21,5 +21,10 @@ export class AddProductoComponent implements OnInit {
       FechaVencimiento: newFechaVencimiento.value,
       ID_Producto: newIDProveedor.value
     });
+    newID.value = '';
+    newNombre.value = '';
+    newDescripcion.value = '';
+    newFechaVencimiento.value = '';
+    newIDProveedor.value ='';
   }
 }
